@@ -1,6 +1,8 @@
-package com.form.heroesBack.heroe;
+package com.form.heroesBack.heroe.repository;
 
 import java.util.List;
+
+import com.form.heroesBack.heroe.entity.Heroe;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
