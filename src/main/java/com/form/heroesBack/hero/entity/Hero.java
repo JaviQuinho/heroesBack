@@ -1,4 +1,4 @@
-package com.form.heroesBack.heroe.entity;
+package com.form.heroesBack.hero.entity;
 
 import java.util.List;
 
@@ -10,24 +10,25 @@ import javax.persistence.ManyToMany;
 
 import com.form.heroesBack.mission.entity.Mission;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
-public class Heroe {
+public class Hero {
+
     @Id
     @GeneratedValue
     private Long id;
+
     @Column(nullable = false)
     private String firstName;
+
     @Column(nullable = false)
     private String lastName;
+
     @Column(nullable = false)
     private String heroName;
+
     @Column(nullable = false)
     private String heroPower;
 

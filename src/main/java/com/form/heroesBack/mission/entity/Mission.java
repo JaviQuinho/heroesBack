@@ -10,15 +10,11 @@ import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 
-import com.form.heroesBack.heroe.entity.Heroe;
+import com.form.heroesBack.hero.entity.Hero;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class Mission {
 
@@ -30,13 +26,7 @@ public class Mission {
     private String instructions;
 
     @ManyToMany()
-    @JoinTable(
-        name = "heroe_mission",
-        joinColumns = @JoinColumn(name = "missionid", referencedColumnName = "id", nullable = false),
-        inverseJoinColumns = @JoinColumn(name="heroeid", referencedColumnName = "id", nullable = false)
-    )
-    
-    private List<Heroe> heroes;
+    @JoinTable(name = "hero_mission", joinColumns = @JoinColumn(name = "missionid", referencedColumnName = "id", nullable = false), inverseJoinColumns = @JoinColumn(name = "heroid", referencedColumnName = "id", nullable = false))
+
+    private List<Hero> heroes;
 }
-
-

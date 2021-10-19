@@ -1,4 +1,4 @@
-INSERT INTO heroe (first_name, last_name, hero_name, hero_power)
+INSERT INTO hero (first_name, last_name, hero_name, hero_power)
 VALUES 
 ('Carol Susan Jane','Danvers','Capitana Marvel','Brilla y vuela'),
 ('Steve','Rogers','Capitán América','Fuerza aumentada y escudo molón'),
@@ -16,7 +16,7 @@ VALUES
 ('Estrenar serie en Netflix'),
 ('Ir al cine a ver DeadPool');
 
-INSERT INTO heroe_mission (heroeid, missionid)
+INSERT INTO hero_mission (heroid, missionid)
 VALUES
 (1,1),
 (1,2),
