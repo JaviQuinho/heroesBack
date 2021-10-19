@@ -21,7 +21,7 @@ public class HeroeController {
     private HeroeRepository heroeRepository;
 
 
-    @GetMapping(value = "/serach/{id}")
+    @GetMapping(value = "/search/{id}")
     public Heroe getHeroeUpperCase(@PathParam("id") long id) {
         
         Heroe heroe = heroeRepository.findById(id).orElse(null);
