@@ -2,11 +2,11 @@ package com.form.heroesBack.hero.entity;
 
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotNull;
 
 import com.form.heroesBack.mission.entity.Mission;
 
@@ -20,16 +20,16 @@ public class Hero {
     @GeneratedValue
     private Long id;
 
-    @Column(nullable = false)
+    @NotNull
     private String firstName;
 
-    @Column(nullable = false)
+    @NotNull
     private String lastName;
 
-    @Column(nullable = false)
+    @NotNull
     private String heroName;
 
-    @Column(nullable = false)
+    @NotNull
     private String heroPower;
 
     @ManyToMany(mappedBy = "heroes")
